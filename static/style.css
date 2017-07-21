@@ -1,0 +1,24 @@
+
+div{
+    margin-top:3%;
+}
+#form_div{
+    width: 440px;
+}
+textarea{
+    float: right;
+    display: inline-block;
+}
+#submit{
+    margin-left:200px;
+    margin-top:110px;
+    width:100px;
+}
+.review{
+    display: inline-block;
+}
+input{
+    float: right;
+    width: 200px;
+}
+t

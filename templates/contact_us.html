@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title> Contact Us</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+<h1>Contact Us</h1>
+
+<form action="/login" method="post">
+<div id = "form_div">
+<div><label class="label_class">Your Good Name: </label><input type="text" name="name" required/>
+</div>
+<div><label class="label_class">Email: </label> <input type="email" name="email" required/>
+</div>
+<div><label class="label_class">Mobile No: </label> <input type="tel" name="mobile" required/>
+</div>
+<div><label class="label_class review">Reviews about Us: </label> <textarea rows="6" cols="23" class="text_review"  name="reviews" required></textarea>
+</div> 
+<div id="submit"><input type="submit" value="submit"/></div>
+</div>
+</form>
+</body>
+</html>
