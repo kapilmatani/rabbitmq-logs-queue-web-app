@@ -1,4 +1,4 @@
-This project mainly concentrate on building a web app that generate logs and pushes to a rabbitmq queue and another python script to fetches logs from that queue.<br />
+This project mainly concentrate on building a web app that generate logs and pushes to a rabbitmq queue and another python script to fetch logs from the queue via exchange. <br />
 
 Requirements to run the project:<br />
 &nbsp; 1. Install rabbitmq-server - https://www.rabbitmq.com/download.html <br />
