@@ -1,0 +1,8 @@
+[*] Waiting for logs. To exit press CTRL+C
+2017-07-22 08:51:29.830 [INFO] ContactPageService - User landed on Contact Us Page
+2017-07-22 08:51:39.846 [INFO] ContactPageService - User entered Full name: 'Kapil Matani'
+2017-07-22 08:51:39.846 [INFO] ContactPageService - User entered Email: 'Kapilmatani03@gmail.com'
+2017-07-22 08:51:39.846 [ERROR] ContactPageService - User entered Invalid Mobile no: '6551'
+2017-07-22 08:51:39.847 [INFO] ContactPageService - User entered Reviews: '55'
+2017-07-22 08:51:39.847 [INFO] ContactPageService - User Successfully submitted the contact form.
+2017-07-22 08:51:42.784 [INFO] ContactPageService - User landed on Contact Us Page
