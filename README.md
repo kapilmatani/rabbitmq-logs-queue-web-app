@@ -1,4 +1,4 @@
-This project mainly concentrate on building a web app that generate logs and pushes to a rabbitmq queue and another python script to fetch logs from the queue via exchange. <br />
+This project mainly concentrate on building a web app that generate logs and pushes to a rabbitmq queue and another web app to fetch logs from the queue via exchange. <br />
 
 Requirements to run the project:<br />
 &nbsp; 1. Install rabbitmq-server - https://www.rabbitmq.com/download.html <br />
@@ -9,14 +9,16 @@ How to run the project: <br />
 &nbsp; 1. sudo service rabbitmq-server start <br />
 &nbsp; 2. go to directory rabbitmq-logs-queue-web-app/app1/ <br />
 &nbsp; 3. export FLASK_APP=flask_app.py <br />
-&nbsp; 4. flask run <br />
-&nbsp; 5. Open your browser and go to: http://localhost:5000 <br />
-&nbsp; 6. For checking logs on terminal go to directory rabbitmq-logs-queue-web-app/app2/ <br />
+&nbsp; 4. flask run -h 0.0.0.0 -p 5000<br />
+&nbsp; 5. Open your browser and go to: http://0.0.0.0:5000 <br />
+&nbsp; 6. For running another app which shows logs in browser:
+&nbsp; 7. go to directory rabbitmq-logs-web-app/app2/ <br />
+&nbsp; 8. python3 flask_receive.py <br />
+&nbsp; 9. open your browser and go to: http://0.0.0.0:3000 <br />
 
 ```
-python receive_logs.py                               #for checking logs on terminal.
-python receive_logs.py > log_file.txt                #to output all logs to a file.
 Submit the contact form on browser and check logs.
+Log file will be generated in app2.
 ```
 
 Happy Coding!!
