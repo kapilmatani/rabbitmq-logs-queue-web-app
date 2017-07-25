@@ -6,6 +6,9 @@ import time
 from flask import redirect
 from datetime import datetime
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0',port='5000')
+
 def log_rabbitmq(log):                      # python function to publish logs whenever called to a exchange named 'logs'
     channel.basic_publish(exchange='logs',  # exchange program will push logs to a exchange named logs  
                           routing_key='',
@@ -26,16 +29,16 @@ def index():
 def login():
     error = None
     if request.method == 'POST':   #handling post request
-	log_rabbitmq(log_format("INFO", "User entered Full name: %r" % str(request.form['name'])))   #adding whatever user entered in logs
-	log_rabbitmq(log_format("INFO", "User entered Email: %r" % str(request.form['email'])))
+        log_rabbitmq(log_format("INFO", "User entered Full name: %r" % str(request.form['name'])))   #adding whatever user entered in logs
+        log_rabbitmq(log_format("INFO", "User entered Email: %r" % str(request.form['email'])))
         
-	mobile = str(request.form['mobile'])
- 	if len(mobile)!=10 or not mobile.isdigit():        #checking mobile no format 
-	    log_rabbitmq(log_format("ERROR", "User entered Invalid Mobile no: %r" % mobile))
-	else:
-	    log_rabbitmq(log_format("INFO", "User entered Mobile no: %r" % str(request.form['mobile'])))	
+        mobile = str(request.form['mobile'])
+        if len(mobile)!=10 or not mobile.isdigit():        #checking mobile no format 
+            log_rabbitmq(log_format("ERROR", "User entered Invalid Mobile no: %r" % mobile))
+        else:
+            log_rabbitmq(log_format("INFO", "User entered Mobile no: %r" % str(request.form['mobile'])))	
 	
-	log_rabbitmq(log_format("INFO", "User entered Reviews: %r" % str(request.form['reviews'])))
-	log_rabbitmq(log_format("INFO", "User Successfully submitted the contact form."))
+        log_rabbitmq(log_format("INFO", "User entered Reviews: %r" % str(request.form['reviews'])))
+        log_rabbitmq(log_format("INFO", "User Successfully submitted the contact form."))
 
-	return render_template('submit.html')  #returning another template
+        return render_template('submit.html')  #returning another template
